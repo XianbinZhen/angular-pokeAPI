@@ -1,0 +1,14 @@
+
+<div class="d-flex flex-column container align-items-center justify-content-center gap-2">
+    <div class="card" style="width: 18rem;">
+        <img src="{{img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{pokemonName}}</h5>
+            <p class="card-text">Height: {{height}}<br> Weight: {{weight}}</p>
+        </div>
+    </div>
+    <div class="my-2">
+        <img src="{{sprite}}" alt="" *ngFor="let sprite of sprites" class="img-thumbnail mx-1" onerror="this.remove()" >
+    </div>
+    <button class="btn btn-primary w-100 my-2" [routerLink]="['/home']" routerLinkActive="router-link-active" >back</button>
+</div>
