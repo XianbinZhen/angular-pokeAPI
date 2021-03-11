@@ -1,0 +1,8 @@
+<a (click)="openDetail()" class="btn">
+    <div class="card " style="width: 8rem;" >
+        <img src="{{pokemonUrl}}" class="card-img-top " alt="..." (error)='onImageError($event)'>
+        <div class="card-body">
+            <h5 class="card-title">{{pokemonName}}</h5>
+        </div>
+    </div>
+</a>
