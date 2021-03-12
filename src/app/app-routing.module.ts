@@ -7,11 +7,12 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { PokemonDetailComponent } from './component/pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomePageComponent },
-  { path: 'detail/:name', component: PokemonDetailComponent, pathMatch: 'full' },
+  { path: 'detail/:name', component: PokemonDetailComponent },
   { path: 'about', component: AboutComponent },
-  {path: '404', component: NotFoundComponent},
-  {path: '**', redirectTo: '/404'}
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 
 ];
 

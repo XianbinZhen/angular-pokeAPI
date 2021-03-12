@@ -36,28 +36,15 @@ export class HomePageComponent implements OnInit {
       const img = this.pokemonDetail.sprites.front_default;
       pokemon.img = img;
     });
-    this.pageNumber = this.pokemonService.currentpage;
-
-
-  }
-
-  async getPrevPage() {
-    this.pokemonPage = await this.pokemonService.getnextPagePokemon(this.prevPage);
-    this.pokemons = this.pokemonPage.results;
-    this.pokemonCount = this.pokemonPage.count;
-    this.prevPage = this.pokemonPage.previous;
-    this.nextPage = this.pokemonPage.next;
-    this.pokemons.forEach( async(pokemon)=> {
-      this.pokemonDetail = await this.pokemonService.getPokemonByName(pokemon.name);
-      const img = this.pokemonDetail.sprites.front_default;
-      pokemon.img = img;
-    });
-    this.pageNumber--;
-    this.pokemonService.currentpage = this.pageNumber;
+    this.pageNumber = this.pokemonService.currentpage;    
   }
 
   async getNextPage(num:number) {
     this.pageNumber += num;
+    if (this.pageNumber >=55)
+      this.pageNumber = 55;
+    if (this.pageNumber <= 0)
+      this.pageNumber = 0;
     this.pokemonService.currentpage = this.pageNumber;
     this.pokemonPage = await this.pokemonService.getAllPokemon();
     this.pokemons = this.pokemonPage.results;
@@ -69,10 +56,9 @@ export class HomePageComponent implements OnInit {
       const img = this.pokemonDetail.sprites.front_default;
       pokemon.img = img;
     });
-    
   }
 
-  searchPokemon() {
+  searchPokemon(): void {
     if(this.searchName == '') {
       const randomNum = Math.floor(Math.random()*896 + 1);
       this.router.navigate(['detail', randomNum]);

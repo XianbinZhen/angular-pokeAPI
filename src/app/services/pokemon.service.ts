@@ -14,18 +14,17 @@ export class PokemonService {
 
   constructor(private http:HttpClient) { }
 
-  async getAllPokemon() {
+  async getAllPokemon(): Promise<PokemonPage> {
     const pokemonPage:PokemonPage = await this.http.get<PokemonPage>(`https://pokeapi.co/api/v2/pokemon/?offset=${this.currentpage*this.pokemonPerPage}&limit=${this.pokemonPerPage}`).toPromise();
-    // let results: Pokemon[] = pokemonPage.results;
     return pokemonPage;
   };
 
-  async getPokemonByName(name:string) {
+  async getPokemonByName(name:string): Promise<PokemonDetail> {
     const pokemonDetail: PokemonDetail = await this.http.get<PokemonDetail>(`https://pokeapi.co/api/v2/pokemon/${name}`).toPromise();
     return pokemonDetail;
   }
 
-  async getnextPagePokemon(url:string) {
+  async getnextPagePokemon(url:string): Promise<PokemonPage> {
     const pokemonPage:PokemonPage = await this.http.get<PokemonPage>(url).toPromise();
     return pokemonPage;
   };
