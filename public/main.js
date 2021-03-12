@@ -176,14 +176,14 @@ class NavbarComponent {
     }
 }
 NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(); };
-NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 8, vars: 4, consts: [[1, "d-flex", "justify-content-around", "align-items-center", "my-2"], ["src", "../../../assets/img/pokemon.svg", "alt", ""], ["routerLinkActive", "router-link-active", 1, "btn", "btn-outline-secondary", "me-2", 3, "routerLink"], ["routerLinkActive", "router-link-active", 1, "btn", "btn-outline-secondary", 3, "routerLink"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
+NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 8, vars: 4, consts: [[1, "d-md-flex", "flex-wrap", "justify-content-around", "align-items-center", "my-2"], ["src", "../../../assets/img/pokemon.svg", "alt", ""], [1, "d-flex", "justify-content-around", "align-items-center", "mt-2"], ["routerLinkActive", "router-link-active", 1, "btn", "btn-outline-secondary", "me-2", 3, "routerLink"], ["routerLinkActive", "router-link-active", 1, "btn", "btn-outline-secondary", 3, "routerLink"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Home");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "About");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();

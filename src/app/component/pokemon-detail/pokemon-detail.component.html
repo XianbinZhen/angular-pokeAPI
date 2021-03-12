@@ -4,6 +4,7 @@
         <img src="{{img}}" class="card-img-top" alt="...">
         <div class="card-footer">
             <h5 class="card-title">{{pokemonName}}</h5>
+            <p>Types: <span *ngFor="let type of types" class="badge bg-pokemonType-{{type.type.name}} me-1">{{type.type.name}}</span></p>
             <p class="card-text">Height: {{height}}<br> Weight: {{weight}}</p>
         </div>
     </div>
