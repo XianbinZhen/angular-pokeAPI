@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-about',
@@ -6,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit(): void {
   }
 

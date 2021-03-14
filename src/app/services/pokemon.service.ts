@@ -10,7 +10,9 @@ import { PokemonDetail } from '../models/pokemon-detail';
 export class PokemonService {
 
   currentpage: number = 0;
+  totalPage: number = 0;
   pokemonPerPage: number = 20;
+  allPokemons: Pokemon[] = [];
 
   constructor(private http:HttpClient) { }
 
@@ -28,5 +30,10 @@ export class PokemonService {
     const pokemonPage:PokemonPage = await this.http.get<PokemonPage>(url).toPromise();
     return pokemonPage;
   };
+
+  async getAllPokemonFromDB(): Promise<PokemonPage> {
+    const pokemonPage: PokemonPage = await this.http.get<PokemonPage>("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0").toPromise();
+    return pokemonPage;
+  }
 
 }
