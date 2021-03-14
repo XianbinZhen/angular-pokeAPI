@@ -12,6 +12,18 @@ import { AboutComponent } from './component/about/about.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './component/not-found/not-found.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +39,16 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatBadgeModule,
+    MatIconModule,
+    MatCardModule,
+    MatDividerModule,
+    MatInputModule,
+    MatTabsModule,
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

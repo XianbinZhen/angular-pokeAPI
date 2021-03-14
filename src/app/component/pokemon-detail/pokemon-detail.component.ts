@@ -23,12 +23,12 @@ export class PokemonDetailComponent implements OnInit {
     this.route.params.subscribe(async params => {
       this.pokemonName = params['name'];
       this.pokemonDetail = await this.pokemonService.getPokemonByName(this.pokemonName);
-      this.img = this.pokemonDetail.sprites.front_default;
-      this.sprites = Object.values(this.pokemonDetail.sprites);
+      this.img = this.pokemonDetail.sprites.other['official-artwork'].front_default || this.pokemonDetail.sprites.front_default;
+      this.sprites = Object.values(this.pokemonDetail.sprites).slice(0, -2);
       this.height = this.pokemonDetail.height;
       this.weight = this.pokemonDetail.weight;
       this.pokemonName = this.pokemonDetail.name;
-      console.log(this.pokemonDetail.types);
+      // console.log(this.pokemonDetail.types);
       this.types = this.pokemonDetail.types;
       
     });

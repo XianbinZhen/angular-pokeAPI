@@ -219,11 +219,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function PokemonDetailComponent_img_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "img", 9);
+function PokemonDetailComponent_span_8_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const sprite_r1 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("src", sprite_r1, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
+    const type_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMapInterpolate1"]("badge bg-pokemonType-", type_r2.type.name, " me-1");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](type_r2.type.name);
+} }
+function PokemonDetailComponent_img_14_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "img", 10);
+} if (rf & 2) {
+    const sprite_r3 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("src", sprite_r3, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
 } }
 const _c0 = function () { return ["/home"]; };
 class PokemonDetailComponent {
@@ -236,6 +246,7 @@ class PokemonDetailComponent {
         this.pokemonDetail = null;
         this.img = '';
         this.sprites = [];
+        this.types = [];
     }
     ngOnInit() {
         this.route.params.subscribe((params) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -246,11 +257,13 @@ class PokemonDetailComponent {
             this.height = this.pokemonDetail.height;
             this.weight = this.pokemonDetail.weight;
             this.pokemonName = this.pokemonDetail.name;
+            console.log(this.pokemonDetail.types);
+            this.types = this.pokemonDetail.types;
         }));
     }
 }
 PokemonDetailComponent.ɵfac = function PokemonDetailComponent_Factory(t) { return new (t || PokemonDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_pokemon_service__WEBPACK_IMPORTED_MODULE_3__["PokemonService"])); };
-PokemonDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PokemonDetailComponent, selectors: [["app-pokemon-detail"]], decls: 14, vars: 7, consts: [[1, "d-flex", "flex-column", "container", "align-items-center", "justify-content-center", "gap-2"], [1, "card", 2, "width", "18rem"], ["alt", "...", 1, "card-img-top", 3, "src"], [1, "card-footer"], [1, "card-title"], [1, "card-text"], [1, "my-2"], ["alt", "", "class", "img-thumbnail mx-1", "onerror", "this.remove()", 3, "src", 4, "ngFor", "ngForOf"], ["routerLinkActive", "router-link-active", 1, "btn", "btn-primary", "w-100", "my-2", 3, "routerLink"], ["alt", "", "onerror", "this.remove()", 1, "img-thumbnail", "mx-1", 3, "src"]], template: function PokemonDetailComponent_Template(rf, ctx) { if (rf & 1) {
+PokemonDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PokemonDetailComponent, selectors: [["app-pokemon-detail"]], decls: 17, vars: 8, consts: [[1, "d-flex", "flex-column", "container", "align-items-center", "justify-content-center", "gap-2"], [1, "card", 2, "width", "18rem"], ["alt", "...", 1, "card-img-top", 3, "src"], [1, "card-footer"], [1, "card-title"], [3, "class", 4, "ngFor", "ngForOf"], [1, "card-text"], [1, "my-2"], ["alt", "", "class", "img-thumbnail mx-1", "onerror", "this.remove()", 3, "src", 4, "ngFor", "ngForOf"], ["routerLinkActive", "router-link-active", 1, "btn", "btn-primary", "w-100", "my-2", 3, "routerLink"], ["alt", "", "onerror", "this.remove()", 1, "img-thumbnail", "mx-1", 3, "src"]], template: function PokemonDetailComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "img", 2);
@@ -258,18 +271,22 @@ PokemonDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵd
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "h5", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Types: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, PokemonDetailComponent_span_8_Template, 2, 4, "span", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "p", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, PokemonDetailComponent_img_11_Template, 1, 1, "img", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, PokemonDetailComponent_img_14_Template, 1, 1, "img", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "button", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, "back");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "button", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "back");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
@@ -277,6 +294,8 @@ PokemonDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵd
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("src", ctx.img, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx.pokemonName);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.types);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("Height: ", ctx.height, "");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
@@ -284,8 +303,8 @@ PokemonDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵd
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.sprites);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](6, _c0));
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwb2tlbW9uLWRldGFpbC5jb21wb25lbnQuY3NzIn0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](7, _c0));
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"]], styles: [".bg-pokemonType-normal[_ngcontent-%COMP%] {\r\n    background-color: #acad99;\r\n}\r\n\r\n.bg-pokemonType-fighting[_ngcontent-%COMP%] {\r\n    background-color: #C45D4C;\r\n}\r\n\r\n.bg-pokemonType-flying[_ngcontent-%COMP%] {\r\n    background-color: #90AAD7;\r\n}\r\n\r\n.bg-pokemonType-poison[_ngcontent-%COMP%] {\r\n    background-color: \t#B369AF;    \r\n}\r\n\r\n.bg-pokemonType-ground[_ngcontent-%COMP%] {\r\n    background-color: #CEB250;\r\n}\r\n\r\n.bg-pokemonType-rock[_ngcontent-%COMP%] {\r\nbackground-color: \t#BAA85E;    \r\n}\r\n\r\n.bg-pokemonType-bug[_ngcontent-%COMP%] {\r\nbackground-color: \t#ACC23E;    \r\n}\r\n\r\n.bg-pokemonType-ghost[_ngcontent-%COMP%] {\r\n    background-color: #816DB6;\r\n}\r\n\r\n.bg-pokemonType-steel[_ngcontent-%COMP%] {\r\n    background-color: #9FA9AF;\r\n}\r\n\r\n.bg-pokemonType-fire[_ngcontent-%COMP%] {\r\nbackground-color: \t#E87A3D;\r\n}\r\n\r\n.bg-pokemonType-water[_ngcontent-%COMP%] {\r\n    background-color: #639CE4;\r\n}\r\n\r\n.bg-pokemonType-grass[_ngcontent-%COMP%] {\r\n    background-color: #82C95B;\r\n}\r\n\r\n.bg-pokemonType-electric[_ngcontent-%COMP%] {\r\n    background-color: #E7C536;\r\n}\r\n\r\n.bg-pokemonType-psychic[_ngcontent-%COMP%] {\r\n    background-color: #E96C95;\r\n}\r\n\r\n.bg-pokemonType-ice[_ngcontent-%COMP%] {\r\n    background-color: #81CFD7;\r\n}\r\n\r\n.bg-pokemonType-dragon[_ngcontent-%COMP%] {\r\n    background-color: #8572C8;\r\n}\r\n\r\n.bg-pokemonType-dark[_ngcontent-%COMP%] {\r\n    background-color: #79726B;\r\n}\r\n\r\n.bg-pokemonType-fairy[_ngcontent-%COMP%] {\r\n    background-color: #E8B0EB;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBva2Vtb24tZGV0YWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSwwQkFBMEI7QUFDOUI7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7QUFDQSwwQkFBMEI7QUFDMUI7O0FBRUE7QUFDQSwwQkFBMEI7QUFDMUI7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7QUFDQSwwQkFBMEI7QUFDMUI7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0IiLCJmaWxlIjoicG9rZW1vbi1kZXRhaWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZy1wb2tlbW9uVHlwZS1ub3JtYWwge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2FjYWQ5OTtcclxufVxyXG5cclxuLmJnLXBva2Vtb25UeXBlLWZpZ2h0aW5nIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNDNDVENEM7XHJcbn1cclxuXHJcbi5iZy1wb2tlbW9uVHlwZS1mbHlpbmcge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzkwQUFENztcclxufVxyXG5cclxuLmJnLXBva2Vtb25UeXBlLXBvaXNvbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBcdCNCMzY5QUY7ICAgIFxyXG59XHJcblxyXG4uYmctcG9rZW1vblR5cGUtZ3JvdW5kIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNDRUIyNTA7XHJcbn1cclxuXHJcbi5iZy1wb2tlbW9uVHlwZS1yb2NrIHtcclxuYmFja2dyb3VuZC1jb2xvcjogXHQjQkFBODVFOyAgICBcclxufVxyXG5cclxuLmJnLXBva2Vtb25UeXBlLWJ1ZyB7XHJcbmJhY2tncm91bmQtY29sb3I6IFx0I0FDQzIzRTsgICAgXHJcbn1cclxuXHJcbi5iZy1wb2tlbW9uVHlwZS1naG9zdCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjODE2REI2O1xyXG59XHJcblxyXG4uYmctcG9rZW1vblR5cGUtc3RlZWwge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzlGQTlBRjtcclxufVxyXG5cclxuLmJnLXBva2Vtb25UeXBlLWZpcmUge1xyXG5iYWNrZ3JvdW5kLWNvbG9yOiBcdCNFODdBM0Q7XHJcbn1cclxuXHJcbi5iZy1wb2tlbW9uVHlwZS13YXRlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjM5Q0U0O1xyXG59XHJcblxyXG4uYmctcG9rZW1vblR5cGUtZ3Jhc3Mge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzgyQzk1QjtcclxufVxyXG5cclxuLmJnLXBva2Vtb25UeXBlLWVsZWN0cmljIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNFN0M1MzY7XHJcbn1cclxuXHJcbi5iZy1wb2tlbW9uVHlwZS1wc3ljaGljIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNFOTZDOTU7XHJcbn1cclxuXHJcbi5iZy1wb2tlbW9uVHlwZS1pY2Uge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzgxQ0ZENztcclxufVxyXG5cclxuLmJnLXBva2Vtb25UeXBlLWRyYWdvbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjODU3MkM4O1xyXG59XHJcblxyXG4uYmctcG9rZW1vblR5cGUtZGFyayB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzk3MjZCO1xyXG59XHJcblxyXG4uYmctcG9rZW1vblR5cGUtZmFpcnkge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0U4QjBFQjtcclxufSJdfQ== */"] });
 
 
 /***/ }),

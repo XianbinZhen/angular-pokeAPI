@@ -1,15 +1,23 @@
 
 <div class="d-flex flex-column container align-items-center justify-content-center gap-2">
-    <div class="card" style="width: 18rem;">
-        <img src="{{img}}" class="card-img-top" alt="...">
-        <div class="card-footer">
-            <h5 class="card-title">{{pokemonName}}</h5>
-            <p>Types: <span *ngFor="let type of types" class="badge bg-pokemonType-{{type.type.name}} me-1">{{type.type.name}}</span></p>
-            <p class="card-text">Height: {{height}}<br> Weight: {{weight}}</p>
+    <div class="d-md-flex flex-row align-items-center justify-content-center gap-2">
+        <mat-card style="width: 28rem;">
+            <img matCardImage src="{{img}}" class="card-img-top" alt="...">
+        </mat-card>
+        <div>
+            <h2 class="mt-2">{{pokemonName}}</h2>
+            <p>Height: {{height}}<br> Weight: {{weight}}</p>
+            <mat-chip-list>Types: 
+                <mat-chip *ngFor="let type of types" class="bg-pokemonType-{{type.type.name}} text-white" >{{type.type.name}}</mat-chip>
+            </mat-chip-list>
         </div>
     </div>
-    <div class="my-2">
-        <img src="{{sprite}}" alt="" *ngFor="let sprite of sprites" class="img-thumbnail mx-1" onerror="this.remove()" >
-    </div>
-    <button class="btn btn-primary w-100 my-2" [routerLink]="['/home']" routerLinkActive="router-link-active" >back</button>
+        <div class="my-2 d-flex flex-wrap gap-2">
+            <div *ngFor="let sprite of sprites">
+                <mat-card *ngIf='sprite != null '>
+                    <img src="{{sprite}}" alt=""  matCardImage onerror="this.remove();" >
+                </mat-card>
+            </div>
+        </div>
+    <a class="btn btn-primary w-100 my-2" [routerLink]="['/home']" routerLinkActive="router-link-active" >back</a>
 </div>

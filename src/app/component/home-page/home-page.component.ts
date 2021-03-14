@@ -33,7 +33,7 @@ export class HomePageComponent implements OnInit {
     this.nextPage = this.pokemonPage.next;
     this.pokemons.forEach( async(pokemon)=> {
       this.pokemonDetail = await this.pokemonService.getPokemonByName(pokemon.name);
-      const img = this.pokemonDetail.sprites.front_default;
+      const img = this.pokemonDetail.sprites.other['official-artwork'].front_default || this.pokemonDetail.sprites.front_default;
       pokemon.img = img;
     });
     this.pageNumber = this.pokemonService.currentpage;    
@@ -53,7 +53,7 @@ export class HomePageComponent implements OnInit {
     this.nextPage = this.pokemonPage.next;
     this.pokemons.forEach( async(pokemon)=> {
       this.pokemonDetail = await this.pokemonService.getPokemonByName(pokemon.name);
-      const img = this.pokemonDetail.sprites.front_default;
+      const img = this.pokemonDetail.sprites.other['official-artwork'].front_default || this.pokemonDetail.sprites.front_default;
       pokemon.img = img;
     });
   }
